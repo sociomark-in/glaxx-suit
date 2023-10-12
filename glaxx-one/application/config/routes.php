@@ -51,8 +51,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'welcome';
 
+
 /* People Dashboard */
-$route['(:any)/people/(:num)/dashboard'] = 'welcome/$1/$2';
+// {portal-name}/app/{app_name}/{userid}/_____
+$route['(:any)/app/people/(:num)/dashboard'] = 'welcome';
 
 
 /* People Attendance */

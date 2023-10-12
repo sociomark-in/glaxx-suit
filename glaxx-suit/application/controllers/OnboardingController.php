@@ -17,7 +17,8 @@ class OnboardingController extends CI_Controller
 	public function solutionChoice()
 	{
 		$portal = $this->session->portal;
-		redirect("/" . $portal . '/getting-started/choose-a-solution');
+		// redirect("/" . $portal . '/getting-started/choose-a-solution');
+		redirect("http://localhost:8000/glaxx-software-suit/glaxx-one/" . $portal . "/app/people/1231232132/dashboard");
 	}
 
 	/**

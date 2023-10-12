@@ -53,7 +53,11 @@ $route['default_controller'] = 'PageController';
 
 /* Getting Started  */
 $route['getting-started/sign-up'] = 'OnboardingController/sign_up';
+
+
+// {portal-name}/___
 $route['(:any)/getting-started/choose-a-solution'] = 'OnboardingController/choose_solution/$1';
+$route['(:any)/dashboard'] = 'OnboardingController/choose_solution/$1';
 
 $route['api/onboarding/new']['POST'] = 'OnboardingController/authenticate';
 $route['api/onboarding/solution']['POST'] = 'OnboardingController/solutionChoice';
