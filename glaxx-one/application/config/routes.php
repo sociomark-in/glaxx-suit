@@ -57,6 +57,9 @@ $route['default_controller'] = 'welcome';
 $route['(:any)/app/people/(:num)/dashboard'] = 'welcome';
 
 
+/* People Mailbox */
+$route['(:any)/app/people/(:num)/mailbox'] = 'welcome';
+
 /* People Attendance */
 $route['(:any)/people/(:num)/attendance/entry/(:any)'] = 'welcome';
 
