@@ -40,6 +40,6 @@ class OnboardingController extends BaseController
 	{
 		$portal = $this->session->get('portal');
 		// redirect("/" . $portal . '/getting-started/choose-a-solution');
-		return redirect()->to("http://localhost:8000/glaxx-software-suit/one-app/" . $portal . "/app/people/1231232132/dashboard");
+		return redirect()->to("http://localhost:8000/glaxx-software-suit/one-app/" . $portal . "/home/people/app/1231232132/dashboard");
 	}
 }

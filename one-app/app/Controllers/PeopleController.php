@@ -12,7 +12,7 @@ class PeopleController extends BaseController
     {
         $data['title'] = $this->appName;
         $data['page'] = "Dashboard";
-        return view('welcome_message', $data);
+        echo view('people/dashboard', $data);
     }
 
 
