@@ -1,2 +1,0 @@
-# glaxx-suit
-Software Suit

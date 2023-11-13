@@ -53,58 +53,10 @@ echo view('people/components/_people_nav');
         <div class="container py-3">
             <div class="row m-0" id="sortWidgets">
                 <div class="col-lg-4 col-md-6 col-12 mb-3">
-                    <div class="card card-widget h-100 app-widget">
-                        <div class="card-header">
-                            <i class="ti ti-grip-vertical"></i>&nbsp;Leave Report
-                        </div>
-                        <div class="list-group">
-                            <?php for ($i = 0; $i < 1; $i++) : ?>
-                                <div class="list-group-item">
-                                    <div class="row m-0 g-0 gap-3 align-items-center">
-                                        <div class="col-auto">
-                                            <div class="count count-donut count-donut-danger-subtle" style="--dp:<?= 25 ?>;--dw: 3px;">0</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <b>Absent</b>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="list-group-item">
-                                    <div class="row m-0 g-0 gap-3 align-items-center">
-                                        <div class="col-auto">
-                                            <div class="count count-donut count-donut-green-subtle" style="--dp:<?= 44 ?>;--dw: 3px;">0</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <b>Compensatory Off</b>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="list-group-item">
-                                    <div class="row m-0 g-0 gap-3 align-items-center">
-                                        <div class="col-auto">
-                                            <div class="count count-donut count-donut-blue-subtle" style="--dp:<?= 35 ?>;--dw: 3px;">0</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <b>Birthday Leave</b>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="list-group-item">
-                                    <div class="row m-0 g-0 gap-3 align-items-center">
-                                        <div class="col-auto">
-                                            <div class="count count-donut count-donut-grey-subtle" style="--dp:<?= 56 ?>;--dw: 3px;">0</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <b>Annual Leaves</b>
-                                        </div>
-                                    </div>
-                                </div>
-                            <?php endfor ?>
-                        </div>
-                    </div>
+                    <?= view('widgets/_widget_leaves_counter');?>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12 mb-3">
-                    <div class="card card-widget h-100 app-widget">
+                    <div class="card card-widget app-widget">
                         <div class="card-header">
                             <div class="row m-0 g-0 justufy-content-between align-items-center">
                                 <div class="col-md col-12">
@@ -139,7 +91,7 @@ echo view('people/components/_people_nav');
                                         <div class="time__log text-center">
                                             <h2>12:35 Hrs</h2>
                                             <p class="text-muted">
-                                                <span><?= date('j F, Y') ?></span> <br>
+                                                <span><?= date('j M, Y') ?></span> <br>
                                                 <span class="text-success">Late by 2:15 Hrs</span>
                                             </p>
                                         </div>
@@ -156,15 +108,33 @@ echo view('people/components/_people_nav');
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12 mb-3">
-                    <div class="card card-widget h-100 app-widget">
+                    <div class="card card-widget app-widget">
                         <div class="card-header"><i class="ti ti-grip-vertical"></i>&nbsp;Upcoming Holidays</div>
-                        <div class="card-body">
-
+                        <div class="card-body p-0">
+                            <div class="list-group">
+                                <?php for ($i = 0; $i < 10; $i++) : ?>
+                                    <div class="list-group-item">
+                                        <div class="row m-0 justify-content-between">
+                                            <div class="col">
+                                                <div class="holiday__occassion">
+                                                    <strong>Diwali</strong>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="holiday__duration">
+                                                    <strong><?= date_format(date_create("2023-11-10"), "j M") ?></strong>&nbsp;
+                                                    <span class="text-muted">(<?= date_format(date_create("2023-11-10"), "l") ?>)</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <?php endfor ?>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-12 mb-3">
-                    <div class="card card-widget h-100 app-widget">
+                    <div class="card card-widget app-widget">
                         <div class="card-header">
                             <div class="row m-0 g-0 justify-content-between">
                                 <div class="col-md-8 col-12">
@@ -175,21 +145,23 @@ echo view('people/components/_people_nav');
                                 </div>
                             </div>
                         </div>
-                        <div class="list-group">
-                            <?php for ($i = 0; $i < 5; $i++) : ?>
-                                <div class="list-group-item">
-                                    <div class="approval__brief">
-                                        <div class="row m-0 g-0 justify-content-between">
-                                            <div class="col-md-8 col-12">
-                                                <a href=""><strong>Lorem ipsum dolor sit.</strong></a>
-                                            </div>
-                                            <div class="col-auto">
-                                                <a href="" class="avatar avatar-sm">SK</a>
+                        <div class="card-body p-0">
+                            <div class="list-group">
+                                <?php for ($i = 0; $i < 15; $i++) : ?>
+                                    <div class="list-group-item">
+                                        <div class="approval__brief">
+                                            <div class="row m-0 g-0 justify-content-between">
+                                                <div class="col-md-8 col-12">
+                                                    <a href=""><strong>Lorem ipsum dolor sit.</strong></a>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <a href="" class="avatar avatar-sm">SK</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            <?php endfor ?>
+                                <?php endfor ?>
+                            </div>
                         </div>
                     </div>
                 </div>
